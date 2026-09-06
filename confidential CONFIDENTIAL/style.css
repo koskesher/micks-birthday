@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+    background-color: #181818;
+    color: #d8d8d8;
+    font-family: "Press Start 2P", monospace;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 18px;
+}
+
+h1 {
+    font-size: large;
+    text-align: center;
+}
+
+.sad-face {
+    width: 200px;
+    margin: 14px;
+}
+
+
+.retry-button {
+    font-family: inherit;
+    padding: 12px 20px;
+    border: 3px solid #d8d8d8;
+    background-color: #181818;
+    color: #d8d8d8;
+}
+
+.retry-button:hover {
+    background-color: #d8d8d8;
+    color: #181818;
+    cursor: pointer;
+}

@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background: #e8dcc8;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* memory wall */
+
+.memory-wall {
+    position: relative;
+
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+    padding: 40px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* letter */
+
+.letter {
+    position: relative;
+    z-index: 5;
+
+    width: min(570px, 90vw);
+
+    margin-top: 0px;
+    padding: 40px 40px 50px;
+
+    background: #f8f1df;
+
+    border: 1px solid #d8cbb3;
+
+    color: #332b24;
+
+    font-family: "Georgia", serif;
+    font-size: 16px;
+    line-height: 1;
+
+    transform: rotate(-1deg);
+}
+
+.letter-tape {
+    position: absolute;
+
+    top: -18px;
+    left: 50%;
+
+    width: 125px;
+    height: 35px;
+
+    background: #d8c49e;
+
+    transform: translateX(-50%) rotate(1deg);
+
+    opacity: 0.9;
+}
+
+.letter-ending {
+    margin-top: 35px;
+
+    text-align: right;
+}
+
+
+/* polaroids */
+
+.polaroid {
+    position: absolute;
+    z-index: 3;
+
+    width: 235px;
+
+    padding: 12px 12px 60px;
+
+    background: #fffdf8;
+
+    box-shadow: 0 8px 20px rgba(50, 40, 30, 0.15);
+}
+
+.polaroid img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+}
+
+
+/* individual positions */
+
+.polaroid-one {
+    left: 2%;
+    top: 10%;
+    transform: rotate(-6deg);
+}
+
+.polaroid-two {
+    right: 2%;
+    top: 8%;
+    transform: rotate(5deg);
+}
+
+.polaroid-three {
+    left: 2%;
+    bottom: 8%;
+    transform: rotate(4deg);
+}
+
+.polaroid-four {
+    right: 2%;
+    bottom: 8%;
+    transform: rotate(-5deg);
+}
+
+.polaroid-five {
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%) rotate(2deg);
+}
+
+/* clickable hearts */
+
+.click-heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 100;
+
+    font-size: 45px;
+    color: #b56b6b;
+
+    animation: heart-pop 0.9s ease-out forwards;
+}
+
+@keyframes heart-pop {
+
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0) scale(0.5) rotate(-10deg);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translate(-50%, -10px) scale(1.2) rotate(10deg);
+    }
+
+    30% {
+        transform: translate(-50%, -20px) scale(1) rotate(-10deg);
+    }
+
+    45% {
+        transform: translate(-50%, -30px) scale(1.1) rotate(10deg);
+    }
+
+    60% {
+        transform: translate(-50%, -40px) scale(1) rotate(-8deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -75px) scale(0.8) rotate(5deg);
+    }
+}
